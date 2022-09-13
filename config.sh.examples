@@ -1,0 +1,19 @@
+source lib/webhook.sh
+
+#####
+# webhook configurations
+
+# Post Services (ENABLE=1, DISABLE=0)
+POST_SLACK_ENABLE=0
+POST_TEAMS_ENABLE=1
+
+## Slack Configuration
+
+SLACK_POST_URL="https://hooks.slack.com/services/{pathes}"
+SLACK_POST_CHANNEL="#通知_ウェブサイト"
+SLACK_POST_NAME="$(hostname)"
+SLACK_POST_EMOJI=':ghost:'
+
+## Teams Configuration
+
+TEAMS_POST_URL="https://{domain}.webhook.office.com/webhookb2/{uuid}/IncomingWebhook/{id}"
